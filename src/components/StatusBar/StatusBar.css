@@ -1,0 +1,52 @@
+.stats-bar {
+  margin-bottom: 24px;
+}
+
+.stats-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 576px) {
+  .stats-bar__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.stats-bar__card {
+  background: #fff;
+  border: 0.5px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.stats-bar__value {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stats-bar__label {
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stats-bar__progress {
+  height: 5px;
+  background: #e5e7eb;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.stats-bar__progress-bar {
+  height: 100%;
+  background: #3B6D11;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
