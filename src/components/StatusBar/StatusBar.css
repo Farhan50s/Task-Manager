@@ -5,8 +5,8 @@
 .stats-bar__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 @media (max-width: 576px) {
@@ -17,36 +17,48 @@
 
 .stats-bar__card {
   background: #fff;
-  border: 0.5px solid rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
-  padding: 14px 16px;
-  text-align: center;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .stats-bar__value {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 1;
-  margin-bottom: 4px;
+  color: #0f172a;
+  letter-spacing: -0.5px;
 }
 
 .stats-bar__label {
   font-size: 11px;
-  color: #6b7280;
+  color: #94a3b8;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+}
+
+.stats-bar__accent {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  border-radius: 99px;
+  margin-bottom: 8px;
 }
 
 .stats-bar__progress {
-  height: 5px;
-  background: #e5e7eb;
+  height: 4px;
+  background: #e2e8f0;
   border-radius: 99px;
   overflow: hidden;
 }
 
 .stats-bar__progress-bar {
   height: 100%;
-  background: #3B6D11;
+  background: #0ea5e9;
   border-radius: 99px;
-  transition: width 0.4s ease;
+  transition: width 0.5s ease;
 }

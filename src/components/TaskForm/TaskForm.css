@@ -4,45 +4,47 @@
   width: 100%;
   padding: 0 12px;
   font-size: 13px;
-  border: 0.5px solid rgba(0,0,0,0.15);
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  background: #f9fafb;
-  color: #111827;
+  background: #f8fafc;
+  color: #0f172a;
   outline: none;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
   font-family: inherit;
 }
 
 .task-form__input {
-  height: 36px;
+  height: 38px;
 }
 
 .task-form__textarea {
-  padding: 8px 12px;
+  padding: 10px 12px;
   resize: vertical;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .task-form__select {
-  height: 36px;
+  height: 38px;
   cursor: pointer;
+  color: #334155;
 }
 
 .task-form__input:focus,
 .task-form__textarea:focus,
 .task-form__select:focus {
-  border-color: #6366f1;
+  border-color: #0ea5e9;
   background: #fff;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
 }
 
 .task-form__row {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .task-form__row--split {
   display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 10px;
+  margin-bottom: 14px;
 }
 
 .task-form__row--split > * {
@@ -55,30 +57,35 @@
 }
 
 .btn-submit {
-  height: 34px;
-  padding: 0 18px;
+  height: 36px;
+  padding: 0 20px;
   font-size: 13px;
-  font-weight: 500;
-  background: #1e1b4b;
-  color: #fff;
+  font-weight: 600;
+  background: #0f172a;
+  color: #f8fafc;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: opacity 0.15s;
+  transition: background 0.15s, transform 0.1s;
   font-family: inherit;
+  letter-spacing: 0.02em;
 }
 
 .btn-submit:hover {
-  opacity: 0.85;
+  background: #1e293b;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
 }
 
 .btn-cancel {
-  height: 34px;
+  height: 36px;
   padding: 0 16px;
   font-size: 13px;
   background: transparent;
-  color: #6b7280;
-  border: 0.5px solid rgba(0,0,0,0.15);
+  color: #64748b;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.15s;
@@ -86,5 +93,5 @@
 }
 
 .btn-cancel:hover {
-  background: #f3f4f6;
+  background: #f1f5f9;
 }

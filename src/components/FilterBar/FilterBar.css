@@ -3,71 +3,81 @@
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .filter-bar__search {
-  height: 34px;
+  height: 36px;
   width: 200px;
   padding: 0 12px;
   font-size: 13px;
-  border: 0.5px solid rgba(0,0,0,0.15);
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  background: #f9fafb;
-  color: #111827;
+  background: #fff;
+  color: #0f172a;
   outline: none;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
   font-family: inherit;
 }
 
 .filter-bar__search:focus {
-  border-color: #6366f1;
-  background: #fff;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
 }
 
 .filter-bar__group {
   display: flex;
-  gap: 2px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .filter-bar__btn {
-  height: 34px;
-  padding: 0 14px;
+  height: 36px;
+  padding: 0 16px;
   font-size: 12px;
-  border: 0.5px solid rgba(0,0,0,0.15);
-  border-radius: 8px;
+  border: none;
+  border-right: 1px solid #e2e8f0;
   background: transparent;
-  color: #6b7280;
+  color: #64748b;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.filter-bar__btn:last-child {
+  border-right: none;
 }
 
 .filter-bar__btn:hover {
-  background: #f3f4f6;
-  color: #111827;
+  background: #f1f5f9;
+  color: #0f172a;
 }
 
 .filter-bar__btn.active {
-  background: #1e1b4b;
-  color: #fff;
-  border-color: #1e1b4b;
+  background: #0f172a;
+  color: #f8fafc;
 }
 
 .filter-bar__select {
-  height: 34px;
+  height: 36px;
   padding: 0 12px;
   font-size: 12px;
-  border: 0.5px solid rgba(0,0,0,0.15);
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  background: #f9fafb;
-  color: #374151;
+  background: #fff;
+  color: #334155;
   cursor: pointer;
   outline: none;
   font-family: inherit;
   transition: border-color 0.15s;
+  font-weight: 500;
 }
 
 .filter-bar__select:focus {
-  border-color: #6366f1;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.1);
 }

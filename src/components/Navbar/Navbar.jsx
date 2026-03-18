@@ -1,4 +1,3 @@
-// src/components/Navbar/Navbar.jsx
 import { NavLink } from 'react-router-dom';
 import { useTasks } from '../../context/TaskContext';
 import './Navbar.css';
@@ -8,7 +7,10 @@ export default function Navbar() {
 
   return (
     <nav className="navbar-custom">
-      <span className="navbar-custom__brand">StudyHub Tasks</span>
+      <span className="navbar-custom__brand">
+        <span className="navbar-custom__brand-dot" />
+        StudyHub Tasks
+      </span>
       <ul className="navbar-custom__links">
         <li>
           <NavLink
