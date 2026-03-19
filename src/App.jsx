@@ -5,6 +5,12 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Settings from './pages/Settings/Settings';
 import './App.css';
 
+/**
+ * The main App component.
+ * Wraps the entire app with the BrowserRouter and the TaskProvider.
+ * Contains the main navigation bar and the main content area.
+ * The main content area is a set of routes that render different components based on the current URL.
+ */
 export default function App() {
   return (
     <BrowserRouter>

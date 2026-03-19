@@ -7,10 +7,14 @@ export default function Navbar() {
 
   return (
     <nav className="navbar-custom">
-      <span className="navbar-custom__brand">
+      <NavLink
+        to="/"
+        className="navbar-custom__brand"
+        end
+      >
         <span className="navbar-custom__brand-dot" />
-        StudyHub Tasks
-      </span>
+        Task Manager
+      </NavLink>
       <ul className="navbar-custom__links">
         <li>
           <NavLink

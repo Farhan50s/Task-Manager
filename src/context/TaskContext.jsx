@@ -4,6 +4,23 @@ import { taskService } from '../services/taskService';
 
 const TaskContext = createContext(null);
 
+/**
+ * Reducer for the task context.
+ * Handles the following actions:
+ *  - LOAD: sets the tasks to the provided array.
+ *  - ADD: adds a new task to the list.
+ *  - UPDATE: updates a task with the provided id and payload.
+ *  - DELETE: removes a task with the provided id.
+ *  - TOGGLE: toggles the completion status of a task with the provided id.
+ *  - CLEAR_COMPLETED: removes all completed tasks from the list.
+ *  - CLEAR_ALL: clears the task list.
+ *  - SET_FILTER: sets the filter for the task list.
+ *  - SET_SEARCH: sets the search query for the task list.
+ *  - SET_PRIORITY_FILTER: sets the priority filter for the task list.
+ * @param {Object} state the current state of the task context.
+ * @param {Object} action the action to be handled.
+ * @returns {Object} the new state of the task context.
+ */
 function taskReducer(state, action) {
   switch (action.type) {
     case 'LOAD':
@@ -90,6 +107,16 @@ export function TaskProvider({ children }) {
   );
 }
 
+/**
+ * Hook to access the task state, dispatch function, filtered tasks, and statistics.
+ * Must be used within the TaskProvider component.
+ * Returns an object with the following properties:
+ * - state: the current task state
+ * - dispatch: the dispatch function to update the task state
+ * - filteredTasks: the tasks that match the current filter and search criteria
+ * - stats: the statistics of the tasks, including the total number of tasks, the number of completed tasks, the number of pending tasks, and the percentage of completed tasks
+ * @throws {Error} if not used within TaskProvider
+ */
 export function useTasks() {
   const ctx = useContext(TaskContext);
   if (!ctx) throw new Error('useTasks must be used within TaskProvider');
