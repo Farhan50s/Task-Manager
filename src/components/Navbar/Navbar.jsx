@@ -12,7 +12,12 @@ export default function Navbar() {
         className="navbar-custom__brand"
         end
       >
-        <span className="navbar-custom__brand-dot" />
+        <img
+          src="/favicon2.png"
+          alt="Logo"
+          className="navbar-custom__favicon "
+          style={{ width: 24, height: 24, marginRight: 8 }}
+        />
         Task Manager
       </NavLink>
       <ul className="navbar-custom__links">
